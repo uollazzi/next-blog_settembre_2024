@@ -1,0 +1,13 @@
+services:
+  mongodb:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - next-blog:/data/db
+      - next-blog_config:/data/configdb
+
+volumes:
+  next-blog:
+  next-blog_config:
